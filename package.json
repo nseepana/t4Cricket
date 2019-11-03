@@ -6,6 +6,9 @@
     "scripts": {
         "format": "npm run prettier -- --write --list-different",
         "prettier": "prettier \"**/*.+(ts)\"",
+        "build:prod": "parcel build ./src/App.ts",
+        "build:dev:t": "parcel ./src/App.ts",
+        "b:d:h": "parcel ./src/index.html",
         "test": "jest --clearCache && jest --watch",
         "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
     },
@@ -31,7 +34,7 @@
     "devDependencies": {
         "@types/jest": "^24.0.21",
         "jest": "^24.9.0",
-        "parcel": "^1.12.4",
+        "parcel-bundler": "^1.12.4",
         "prettier": "^1.18.2",
         "ts-jest": "^24.1.0",
         "ts-node": "^8.4.1",
