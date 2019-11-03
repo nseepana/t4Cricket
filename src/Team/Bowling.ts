@@ -1,26 +1,26 @@
-import Cricketcontext from '../Simulator/Cricketcontext';
+import Cricketcontext from "../Simulator/Cricketcontext";
 export enum Team {
   Bengaluru,
   Chennai
 }
 export default class Bowling {
-  static ballsPerOver = 6;
+  ballsPerOver = 6;
   remainingBalls: number;
   initialOver: number;
-  constructor(public remainingOver: number, public bowlingTeam: Team) {
+  constructor(public remainingOver: number, public team: Team) {
     this.$setdefaults(remainingOver);
   }
   $setdefaults(val) {
     this.initialOver = val;
-    this.remainingBalls = Bowling.ballsPerOver * val;
+    this.remainingBalls = this.ballsPerOver * val;
   }
-  nextBall(cricketcontext:Cricketcontext):Bowling {
-	  return cricketcontext.nextBall();
+  nextBall(cricketcontext: Cricketcontext): Bowling {
+    return cricketcontext.nextBall();
   }
 
   beforeBowling() {
-    if (this.remainingBalls % Bowling.ballsPerOver == 0) {
-      let over = this.remainingBalls / Bowling.ballsPerOver;
+    if (this.remainingBalls % this.ballsPerOver == 0) {
+      let over = this.remainingBalls / this.ballsPerOver;
       console.log(`${over} overs`);
     }
   }
