@@ -1,0 +1,40 @@
+{
+    "name": "t4cricket",
+    "version": "0.0.1",
+    "description": "T4Cup Finals",
+    "main": "index.js",
+    "scripts": {
+        "format": "npm run prettier -- --write --list-different",
+        "prettier": "prettier \"**/*.+(ts)\"",
+        "test": "jest --clearCache && jest --watch",
+        "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nseepana/t4Cricket.git"
+    },
+    "keywords": [
+        "node",
+        "javascript",
+        "typescript",
+        "jest",
+        "oop",
+        "js",
+        "ts-jest"
+    ],
+    "author": "naresh@seepana.com",
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/nseepana/t4Cricket/issues"
+    },
+    "homepage": "https://github.com/nseepana/t4Cricket#readme",
+    "devDependencies": {
+        "@types/jest": "^24.0.21",
+        "jest": "^24.9.0",
+        "parcel": "^1.12.4",
+        "prettier": "^1.18.2",
+        "ts-jest": "^24.1.0",
+        "ts-node": "^8.4.1",
+        "typescript": "^3.6.4"
+    }
+}
