@@ -13,18 +13,7 @@ export default class Batsman extends Player {
     super(player, team, ballProbability);
   }
 
-  nextRun() {
-    let totalRuns = this.totalRunScored;
-    let currentScore = this.scored();
-    if (currentScore > 0) {
-      totalRuns += currentScore;
-      this.requiredRun = this.requiredRun - currentScore;
-      this.totalRunScored = totalRuns;
-    }
-    this.afterRun();
-  }
+  
 
-  afterRun() {
-    console.log(this);
-  }
+  
 }

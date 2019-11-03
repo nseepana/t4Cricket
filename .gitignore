@@ -64,4 +64,7 @@ typings/
 .vscode
 
 # buildcode
-.dist
+dist
+
+# cache
+.cache

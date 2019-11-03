@@ -1,4 +1,5 @@
 import { Team } from './Bowling';
+import Cricketcontext from '../Simulator/Cricketcontext';
 export class Player {
   playerProbability: number[];
   constructor(
@@ -41,5 +42,9 @@ export class Player {
 
   getrandom() {
     return Math.random() * 1;
+  }
+
+  nextRun(cricketContext:Cricketcontext){
+	  return cricketContext.nextRun();
   }
 }
