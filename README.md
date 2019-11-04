@@ -22,5 +22,9 @@ npm run build:start
 npm i
 ```
 
+## Test 
 
+```bash
+npm t
+```
 
