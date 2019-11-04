@@ -2,12 +2,15 @@
     "name": "t4cricket",
     "version": "0.1.0",
     "description": "T4Cup Finals",
-    "main": "index.js",
     "scripts": {
+        "start": "node ./dist/App",
+        "build:start": "npm run build:prod && npm start",
         "format": "npm run prettier -- --write --list-different",
         "prettier": "prettier \"**/*.+(ts)\"",
-        "build:prod": "parcel build ./src/App.ts",
-        "build:html": "parcel build ./src/index.html",
+        "build:prod": "npm run prebuild && parcel build ./src/App.ts --target node --no-cache --no-source-maps",
+        "build:html": "npm run prebuild && parcel build ./src/index.html --no-cache --no-source-maps",
+        "build:html:dev": "npm run prebuild && parcel ./src/index.html",
+        "prebuild": "rm -rf dist",
         "test": "jest --clearCache && jest --watch"
     },
     "repository": {

@@ -166,7 +166,6 @@ export class Simulator extends Cricketcontext {
   }
 
   handleRun(currentover: string) {
-    debugger;
     this.striker.totalRunScored = this.striker.totalRunScored + this.scorecard.currentScore;
     this.summary[this.striker.name] = this.striker;
     $currentplayerstatusformatter;
